@@ -4,26 +4,26 @@ Simulink C++ S-function for software-in-the-loop simulation with ArduPilot.
 
 [![View ArduPilot software-in-the-loop (SIL) connector for Simulink on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://uk.mathworks.com/matlabcentral/fileexchange/114315-ardupilot-software-in-the-loop-sil-connector-for-simulink)
 
-Requirements
-- MATLAB & Simulink (MATLAB R2024a or earlier)
-- MinGW-w64 or MSVC C/C++ Compiler
-- MissionPlanner
+## Requirements ##
+    1. Windows 10/11
+    2. MSVC C/C++ (recommended) or MinGW-w64 compiler
+    3. MATLAB & Simulink (MATLAB R2022a or later)
 
-Files
+## Compiler Installation and MEX Setup
 
-[ardupilot_sil_connector.cpp](https://github.com/aviumtechnologies/ardupilot-sil-connector/blob/master/ardupilot_sil_connector.cpp)
-<div style="height:1px; background-color:rgba(0,0,0,0.12);"></div>
+You can install the Visual Studio Community Edition. During the installation, make sure to include the **"Desktop development with C++"**, which includes the necessary tools for MATLAB compatibility. After installation, run this command in the MATLAB command line:
 
-[make.m](https://github.com/aviumtechnologies/ardupilot-sil-connector/blob/master/make.m)
-<div style="height:1px; background-color:rgba(0,0,0,0.12);"></div>
+```
+mex -setup
+```
 
-[includes.zip](https://github.com/aviumtechnologies/ardupilot-sil-connector/blob/master/includes.zip) (contains the Asio C++ library)
-<div style="height:1px; background-color:rgba(0,0,0,0.12);"></div>
+MATLAB should output this: 
+**_MEX configured to use 'Microsoft Visual C++ 2022 (C)' for C language compilation_.**
 
-Build instructions
+## Build SITL Connector Library
 
--  Install MATLAB-supported compiler  
-https://mathworks.com/support/requirements/supported-compilers.html.
--  Download the "ardupilot_sil_connector.cpp" and "make.m" files and the "includes.zip" archive.
--  Unzip the "includes.zip archive".
--  Run "make.m" to create a "ardupilot_sil_connector.mexw64" (Windows), "ardupilot_sil_connector.mexa64" (Linux), "ardupilot_sil_connector.mexmaci64" (macOS) file.
+- Unzip the _**"includes.zip"**_ file.
+- Open the folder containing the Library in MATLAB.
+- Add it to the MATLAB path and run **“make.m”** file to compile the _**"ardupilot_sil_connector.cpp"**_ file. If successful, _**"ardupilot_sil_connector"**_ MATAB Mex file will be created in the folder.
+
+![image](https://github.com/user-attachments/assets/945159b0-6107-40d9-9eb6-daa66234d5a5)
