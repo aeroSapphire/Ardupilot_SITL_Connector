@@ -5,7 +5,7 @@ Simulink C++ S-function for software-in-the-loop simulation with ArduPilot.
 [![View ArduPilot software-in-the-loop (SIL) connector for Simulink on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://uk.mathworks.com/matlabcentral/fileexchange/114315-ardupilot-software-in-the-loop-sil-connector-for-simulink)
 
 Requirements
-- MATLAB & Simulink (MATLAB R2022a or earlier)
+- MATLAB & Simulink (MATLAB R2024a or earlier)
 - MinGW-w64 or MSVC C/C++ Compiler
 - MissionPlanner
 
